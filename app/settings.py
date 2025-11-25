@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 
-from django.conf.global_settings import INTERNAL_IPS
+from django.conf.global_settings import INTERNAL_IPS, MEDIA_ROOT, MEDIA_URL
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent # Указывает расположение файла. Сейчас это: C:\Users\kanda\OneDrive\Desktop\Codes\Python\6hCourse\Django\app_1
@@ -128,6 +128,10 @@ STATIC_URL = 'static/' #Это просто префикс к адресу, а �
 STATICFILES_DIRS = (
     BASE_DIR / 'static',
     )
+
+MEDIA_URL = 'media/'
+
+MEDIA_ROOT = BASE_DIR / 'media'
 
 INTERNAL_IPS = [
     #...
